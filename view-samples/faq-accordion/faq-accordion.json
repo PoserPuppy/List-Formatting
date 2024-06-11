@@ -129,21 +129,29 @@
             }
           },
           {
-            "elmType": "button",
-            "customRowAction": {
-              "action": "defaultClick"
-            },
-            "txtContent": "Show more",
+            "elmType": "a",
             "attributes": {
-              "class": "sp-row-button"
+              "href": "[$ShowMore]",
+              "target": "_blank"
             },
             "style": {
-              "display": "=if([$ShowMore] == 'Yes', 'block', 'none')",
-              "margin-bottom": "8px",
-              "color": "white",
-              "background-color": "#0077DB"
-            }
-          }
+              "text-decoration": "none"
+            },
+            "children": [
+              {
+                "elmType": "button",
+                "txtContent": "Show more",
+                "style": {
+                  "display": "=if([$ShowMore] == '', 'none', 'block')",
+                  "margin-bottom": "8px",
+                  "color": "white"
+                },
+								"attributes": {
+									"class": "ms-bgColor-blue ms-bgColor-themePrimary--hover"
+								}
+              }
+		        ]
+		      }
         ]
       }
     ]
